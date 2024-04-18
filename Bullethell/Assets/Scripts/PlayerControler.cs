@@ -6,7 +6,7 @@ public class PlayerControler : MonoBehaviour
 {
     public float velocidad = 5f;
     private Rigidbody2D rb2D;
-
+ 
     void Start()
     {
         rb2D = GetComponent<Rigidbody2D>(); // Obtén la referencia al Rigidbody2D
@@ -36,5 +36,6 @@ public class PlayerControler : MonoBehaviour
         {
             rb2D.AddForce(Vector2.down * velocidad, ForceMode2D.Impulse);
         }
+
     }
 }
