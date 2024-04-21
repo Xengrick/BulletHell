@@ -13,7 +13,6 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         rb2 = GetComponent<Rigidbody2D>();
-        rb2.constraints = RigidbodyConstraints2D.FreezeRotation;
         currentPoint = pointB.transform;
     }
 
