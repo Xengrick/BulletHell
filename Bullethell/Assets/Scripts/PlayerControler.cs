@@ -10,12 +10,13 @@ public class PlayerControler : MonoBehaviour
 
     void Start()
     {
-        rb2D = GetComponent<Rigidbody2D>(); // Obtén la referencia al Rigidbody2D
+        rb2D = GetComponent<Rigidbody2D>();
+        rb2D.constraints = RigidbodyConstraints2D.FreezeRotation;
     }
 
     void Update()
     {
-        // Resetea la velocidad para evitar acumulación de fuerzas
+        
         rb2D.velocity = Vector2.zero;
 
         if (Input.GetKey("a"))
