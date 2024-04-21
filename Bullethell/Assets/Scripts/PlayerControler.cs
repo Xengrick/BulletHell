@@ -6,10 +6,11 @@ public class PlayerControler : MonoBehaviour
 {
     public float velocidad = 5f;
     private Rigidbody2D rb2D;
- 
+
     void Start()
     {
-        rb2D = GetComponent<Rigidbody2D>(); // Obtén la referencia al Rigidbody2D
+        rb2D = GetComponent<Rigidbody2D>(); 
+        rb2D.constraints = RigidbodyConstraints2D.FreezeRotation; 
     }
 
     void Update()
@@ -39,3 +40,4 @@ public class PlayerControler : MonoBehaviour
 
     }
 }
+
