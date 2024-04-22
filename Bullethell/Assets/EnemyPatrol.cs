@@ -14,6 +14,7 @@ public class Enemy : MonoBehaviour
     {
         rb2 = GetComponent<Rigidbody2D>();
         currentPoint = pointB.transform;
+        rb2.constraints = RigidbodyConstraints2D.FreezeRotation;
     }
 
     // Update is called once per frame
