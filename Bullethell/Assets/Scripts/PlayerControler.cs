@@ -57,6 +57,5 @@ public class PlayerControler : MonoBehaviour
             gameObject.GetComponent<Animator>().SetBool("left", false);
             gameObject.GetComponent<Animator>().SetBool("right", false);
         }
-
     }
 }
