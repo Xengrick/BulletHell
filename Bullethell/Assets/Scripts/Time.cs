@@ -29,19 +29,6 @@ public class Puntaje : MonoBehaviour
         {
             bossCreado = true; // Marca que el jefe ha sido creado
             boss.SetActive(true);
-
-            destroyEnemies();
-        }
-    }
-
-    private void destroyEnemies()
-    {
-        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
-
-        // Recorre todos los objetos encontrados y destrúyelos
-        foreach (GameObject enemy in enemies)
-        {
-            Destroy(enemy);
         }
     }
 }
