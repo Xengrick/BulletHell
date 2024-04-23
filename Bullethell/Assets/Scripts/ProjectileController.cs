@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    public float velocidad = 10f; 
+    public float velocidad = 10f;
 
     // Start is called before the first frame update
     void Start()
@@ -36,5 +36,7 @@ public class Projectile : MonoBehaviour
         // destruye el proyectil
         Destroy(gameObject);
     }
+
+
 
 }

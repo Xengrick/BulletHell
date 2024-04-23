@@ -15,7 +15,7 @@ public class PlayerBehavior : MonoBehaviour
         }
     }
 
-    private void takeDamage(int d)
+    public void takeDamage(int d)
     {
         if (life >= 1)
         {
@@ -35,7 +35,7 @@ public class PlayerBehavior : MonoBehaviour
         Destroy(gameObject);
     }
 
-    private void gameOver()
+    public void gameOver()
     {
         // Encuentra todos los objetos en la escena con el tag especificado
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
