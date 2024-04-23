@@ -25,9 +25,9 @@ public class Puntaje : MonoBehaviour
             textMesh.text = puntaje.ToString("0");
         }
 
-        if (puntaje >= 10f && !bossCreado)
+        if (puntaje >= 20f && !bossCreado)
         {
-            bossCreado = true; // Marca que el jefe ha sido creado
+            bossCreado = true; 
             boss.SetActive(true);
         }
     }

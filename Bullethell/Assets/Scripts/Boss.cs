@@ -25,8 +25,9 @@ public class Boss : MonoBehaviour
         InvokeRepeating("patronAtaque", 2f, 2f);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log("Colisión detectada");
         if (collision.gameObject.CompareTag("Bala"))
         {
             // Reduce la salud del jefe

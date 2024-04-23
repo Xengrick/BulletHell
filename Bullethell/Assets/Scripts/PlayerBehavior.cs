@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement; 
 
 public class PlayerBehavior : MonoBehaviour
 {
@@ -24,26 +25,22 @@ public class PlayerBehavior : MonoBehaviour
             if (life < 1)
             {
                 gameObject.GetComponent<Animator>().SetBool("isDead", true);
-                //gameOver();
-                Invoke("dead",5.0f);
+                Invoke("gameOver", 1.0f); 
             }
         }
     }
 
-    private void dead()
-    {
-        Destroy(gameObject);
-    }
-
     public void gameOver()
     {
-        // Encuentra todos los objetos en la escena con el tag especificado
+        
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
-
-        // Recorre todos los objetos encontrados y destrúyelos
         foreach (GameObject enemy in enemies)
         {
             Destroy(enemy);
         }
+
+       
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); 
     }
 }
+

@@ -22,17 +22,16 @@ public class BossBullets : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        // Verifica si el proyectil colisiona con un enemigo
+
         if (other.CompareTag("Player"))
         {
             player.takeDamage(1);
         }
     }
 
-    //sale de la camara
     void OnBecameInvisible()
     {
-        // destruye el proyectil
+  
         Destroy(gameObject);
     }
 }

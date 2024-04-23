@@ -442,11 +442,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1173634163195482315, guid: c3dd55a715824ac4dbafd1e33eb62464, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.26
+      value: 0.99
       objectReference: {fileID: 0}
     - target: {fileID: 1173634163195482315, guid: c3dd55a715824ac4dbafd1e33eb62464, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 11.74
+      value: 11.65
       objectReference: {fileID: 0}
     - target: {fileID: 1173634163195482315, guid: c3dd55a715824ac4dbafd1e33eb62464, type: 3}
       propertyPath: m_LocalPosition.z
@@ -483,6 +483,10 @@ PrefabInstance:
     - target: {fileID: 1551321303172754738, guid: c3dd55a715824ac4dbafd1e33eb62464, type: 3}
       propertyPath: m_IsTrigger
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1966356309766004034, guid: c3dd55a715824ac4dbafd1e33eb62464, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8035059661580996268, guid: c3dd55a715824ac4dbafd1e33eb62464, type: 3}
       propertyPath: m_Name
@@ -630,7 +634,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a22d25252bce0f4f9cdaed68a1613e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnRate: 5
+  spawnRate: 3
   enemyPrefabs:
   - {fileID: 8678188886139917232, guid: bd021254c9635fc46a152dc198f217e3, type: 3}
   canSpawn: 1
@@ -5737,7 +5741,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5c9e83cde6a40640a0ac5b3b9044415, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  saludMaxima: 20
+  saludMaxima: 5
   balaPrefab: {fileID: 7989807142718908048, guid: 69c128520b0e1c14f860f3930f675e46, type: 3}
   velocidadBala: 5
 --- !u!1 &1883687846
@@ -5769,7 +5773,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a22d25252bce0f4f9cdaed68a1613e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnRate: 5
+  spawnRate: 3
   enemyPrefabs:
   - {fileID: 8678188886139917232, guid: bd021254c9635fc46a152dc198f217e3, type: 3}
   canSpawn: 1

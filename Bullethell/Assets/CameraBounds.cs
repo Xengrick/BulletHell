@@ -11,7 +11,7 @@ public class CameraBounds : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // Encuentra la cámara principal por la etiqueta
+      
         GameObject cameraObject = GameObject.FindGameObjectWithTag("MainCamera");
         if (cameraObject != null)
         {
@@ -29,7 +29,7 @@ public class CameraBounds : MonoBehaviour
     {
         if (mainCamera != null)
         {
-            // Obtener los límites de la cámara en coordenadas del mundo
+            
             float minX = mainCamera.ViewportToWorldPoint(new Vector3(0, 0, mainCamera.nearClipPlane)).x + characterWidth / 2;
             float maxX = mainCamera.ViewportToWorldPoint(new Vector3(1, 0, mainCamera.nearClipPlane)).x - characterWidth / 2;
             float minY = mainCamera.ViewportToWorldPoint(new Vector3(0, 0, mainCamera.nearClipPlane)).y + characterHeight / 2;
@@ -37,11 +37,11 @@ public class CameraBounds : MonoBehaviour
 
             Vector3 position = transform.position;
 
-            // Restringir la posición dentro de los límites de la cámara
+   
             position.x = Mathf.Clamp(position.x, minX, maxX);
             position.y = Mathf.Clamp(position.y, minY, maxY);
 
-            // Aplicar la nueva posición
+      
             transform.position = position;
         }
     }
