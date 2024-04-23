@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    public float velocidad = 10f; //velocidad de la bala
+    public float velocidad = 10f;
 
     // Start is called before the first frame update
     void Start()
@@ -20,14 +20,13 @@ public class Projectile : MonoBehaviour
         GetComponent<Rigidbody2D>().velocity = direction * velocidad;
     }
 
-    //colisión con un objeto
     void OnTriggerEnter2D(Collider2D other)
     {
         // Verifica si el proyectil colisiona con un enemigo
         if (other.CompareTag("Enemy"))
         {
-            // destruye el proyectil
             Destroy(gameObject);
+            Destroy(other.gameObject);
         }
     }
 
@@ -37,5 +36,7 @@ public class Projectile : MonoBehaviour
         // destruye el proyectil
         Destroy(gameObject);
     }
+
+
 
 }
