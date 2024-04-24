@@ -7,11 +7,14 @@ public class PlayerControler : MonoBehaviour
     public float velocidad = 5f;
     private Rigidbody2D rb2D;
     public GameObject projectilePrefab;
+    public AudioClip shotSound;
+    private AudioSource audioSource;
 
     void Start()
     {
         rb2D = GetComponent<Rigidbody2D>();
         rb2D.constraints = RigidbodyConstraints2D.FreezeRotation;
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -47,6 +50,7 @@ public class PlayerControler : MonoBehaviour
         {
             //crea un projectil
             Instantiate(projectilePrefab, transform.position, Quaternion.identity);
+            audioSource.PlayOneShot(shotSound);
         }
 
         //animación
