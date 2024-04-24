@@ -7,11 +7,20 @@ public class PlayerBehavior : MonoBehaviour
 {
     public GameObject[] hearts;
     public int life;
+    public AudioClip hitSound;
+    private AudioSource audioSource;
+
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
+            
+            audioSource.PlayOneShot(hitSound);
             takeDamage(1);
         }
     }
@@ -22,6 +31,7 @@ public class PlayerBehavior : MonoBehaviour
         {
             life -= d;
             Destroy(hearts[life].gameObject);
+      
             if (life < 1)
             {
                 gameObject.GetComponent<Animator>().SetBool("isDead", true);
